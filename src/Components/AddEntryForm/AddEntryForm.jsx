@@ -7,23 +7,20 @@ const AddEntryForm = (props) => {
 
     function handleSubmit(event){
         event.preventDefault();
-        let newPost = {
+        let newEntry = {
             name: name,
             comment: comment
         };
-        console.log(newPost);
+        console.log(newEntry);
+        props.addNewEntryProperty(newEntry)
     }
     
     return (
         <form onSubmit={handleSubmit}>
-            <div> 
                 <label>Name</label>
                 <input type='string' value={name} onChange={(event) => setName(event.target.value)}/> 
-            </div>
-            <div>
                 <label>Post</label>
                 <input type='string' value={comment} onChange={(event) => setComment(event.target.value)}/>
-            </div>
                 <button type='submit'>Create</button>
         </form>
     );

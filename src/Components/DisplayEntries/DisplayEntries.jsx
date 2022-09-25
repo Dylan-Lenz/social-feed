@@ -5,14 +5,10 @@ const DisplayEntries = (props) => {
         <tbody>
             {props.parentEntries.map((entry) => {
             return (
-                <div>
                 <tr>
                     <td>{entry.name}</td>
-                </tr>
-                <tr>
                     <td>{entry.comment}</td>
                 </tr>
-                </div>
             );
             })}
         </tbody>

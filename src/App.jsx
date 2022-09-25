@@ -6,9 +6,14 @@ function App() {
 
   const [entries, setEntries] = useState([{name:'Jon Smith', comment:'Stuff'}, {name:'Jane Smith', comment:'More Stuff'}])
 
+  function addNewEntry(entry){
+    let tempEntries = [entry, ...entries];
+    setEntries(tempEntries);
+  }
+
   return (
     <div>
-      <AddEntryForm/>
+      <AddEntryForm addNewEntryProperty={addNewEntry}/>
       <DisplayEntries parentEntries={entries} />
     </div>
   );

@@ -1,25 +1,19 @@
 
-const DisplayEntries = (props) => {
+const DisplayEntries=(props)=> {
     return ( 
-       <table>
-        <thead>
-        {props.parentEntries.map((entry) => {
-            return (
-                <th>{entry.name}</th>
-            );
-        })}
-        </thead>
+    <table>
         <tbody>
         {props.parentEntries.map((entry) => {
             return (
-                <tr>
-                    <td>{entry.comment}</td>
-                </tr>
+            <tr>
+                <td>{entry.name}</td>
+                <td>{entry.comment}</td>
+            </tr>
             );
         })}
         </tbody>
-       </table> 
-     );
+    </table>
+    );
 }
  
 export default DisplayEntries;

@@ -7,16 +7,14 @@ function App() {
   const [entries, setEntries] = useState([{name:'Jon Smith', comment:'Words'}, {name:'Jane Smith', comment:'More Words'}])
 
   function addNewEntry(entry){
-    
     let tempEntries = [...entries, entry];
-    
     setEntries(tempEntries);
   }
 
   return (
     <div>
-      <DisplayEntries parentEntries={entries} />
-      <AddEntryForm addNewEntry={addNewEntry}/>
+      <AddEntryForm addNewEntryProp={addNewEntry}/>
+      <DisplayEntries parentEntries={entries}/>
     </div>
   );
 }

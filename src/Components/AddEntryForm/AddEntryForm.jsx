@@ -12,7 +12,7 @@ const AddEntryForm = (props) => {
             comment: comment
         };
         console.log(newEntry);
-        props.addNewEntry(newEntry)
+        props.addNewEntryProp(newEntry)
     }
     
     return (

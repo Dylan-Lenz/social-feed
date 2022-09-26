@@ -5,14 +5,14 @@ const AddEntryForm = (props) => {
     const {name, setName} = useState('');
     const {comment, setComment} = useState('');
 
-    function handleSubmit(event){
+    function handleSubmit(event) {
         event.preventDefault();
         let newEntry = {
             name: name,
             comment: comment
         };
         console.log(newEntry);
-        props.addNewEntryProperty(newEntry)
+        props.addNewEntry(newEntry)
     }
     
     return (
